@@ -37,3 +37,4 @@
 
 - [Intro](./reference/README.md)
 - [Globals](./reference/globals.md)
+- [Editor](./reference/modules/_interfaces_editor_.md)
