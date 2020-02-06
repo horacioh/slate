@@ -1,5 +1,3 @@
-[slate](../README.md) › [Globals](../globals.md) › ["interfaces/editor"](../modules/_interfaces_editor_.md) › [Editor](_interfaces_editor_.editor.md)
-
 # Interface: Editor
 
 The `Editor` interface stores all the state of a Slate editor. It is extended
@@ -7,11 +5,11 @@ by plugins that wish to add their own helpers and implement new behaviors.
 
 ## Hierarchy
 
-* **Editor**
+- **Editor**
 
 ## Indexable
 
-* \[ **key**: *string*\]: any
+- \[ **key**: _string_\]: any
 
 The `Editor` interface stores all the state of a Slate editor. It is extended
 by plugins that wish to add their own helpers and implement new behaviors.
@@ -20,288 +18,252 @@ by plugins that wish to add their own helpers and implement new behaviors.
 
 ### Properties
 
-* [addMark](_interfaces_editor_.editor.md#addmark)
-* [apply](_interfaces_editor_.editor.md#apply)
-* [children](_interfaces_editor_.editor.md#children)
-* [deleteBackward](_interfaces_editor_.editor.md#deletebackward)
-* [deleteForward](_interfaces_editor_.editor.md#deleteforward)
-* [deleteFragment](_interfaces_editor_.editor.md#deletefragment)
-* [insertBreak](_interfaces_editor_.editor.md#insertbreak)
-* [insertFragment](_interfaces_editor_.editor.md#insertfragment)
-* [insertNode](_interfaces_editor_.editor.md#insertnode)
-* [insertText](_interfaces_editor_.editor.md#inserttext)
-* [isInline](_interfaces_editor_.editor.md#isinline)
-* [isVoid](_interfaces_editor_.editor.md#isvoid)
-* [marks](_interfaces_editor_.editor.md#marks)
-* [normalizeNode](_interfaces_editor_.editor.md#normalizenode)
-* [onChange](_interfaces_editor_.editor.md#onchange)
-* [operations](_interfaces_editor_.editor.md#operations)
-* [removeMark](_interfaces_editor_.editor.md#removemark)
-* [selection](_interfaces_editor_.editor.md#selection)
+- [addMark](_interfaces_editor_.editor.md#addmark)
+- [apply](_interfaces_editor_.editor.md#apply)
+- [children](_interfaces_editor_.editor.md#children)
+- [deleteBackward](_interfaces_editor_.editor.md#deletebackward)
+- [deleteForward](_interfaces_editor_.editor.md#deleteforward)
+- [deleteFragment](_interfaces_editor_.editor.md#deletefragment)
+- [insertBreak](_interfaces_editor_.editor.md#insertbreak)
+- [insertFragment](_interfaces_editor_.editor.md#insertfragment)
+- [insertNode](_interfaces_editor_.editor.md#insertnode)
+- [insertText](_interfaces_editor_.editor.md#inserttext)
+- [isInline](_interfaces_editor_.editor.md#isinline)
+- [isVoid](_interfaces_editor_.editor.md#isvoid)
+- [marks](_interfaces_editor_.editor.md#marks)
+- [normalizeNode](_interfaces_editor_.editor.md#normalizenode)
+- [onChange](_interfaces_editor_.editor.md#onchange)
+- [operations](_interfaces_editor_.editor.md#operations)
+- [removeMark](_interfaces_editor_.editor.md#removemark)
+- [selection](_interfaces_editor_.editor.md#selection)
 
 ## Properties
 
-###  addMark
+### addMark
 
-• **addMark**: *function*
-
-*Defined in [interfaces/editor.ts:50](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L50)*
+• **addMark**: _function_
 
 #### Type declaration:
 
-▸ (`key`: string, `value`: any): *void*
+▸ (`key`: string, `value`: any): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`key` | string |
-`value` | any |
+| Name    | Type   |
+| ------- | ------ |
+| `key`   | string |
+| `value` | any    |
 
-___
+---
 
-###  apply
+### apply
 
-• **apply**: *function*
-
-*Defined in [interfaces/editor.ts:51](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L51)*
+• **apply**: _function_
 
 #### Type declaration:
 
-▸ (`operation`: [Operation](../modules/_interfaces_operation_.md#operation)): *void*
+▸ (`operation`: [Operation](../modules/_interfaces_operation_.md#operation)): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`operation` | [Operation](../modules/_interfaces_operation_.md#operation) |
+| Name        | Type                                                        |
+| ----------- | ----------------------------------------------------------- |
+| `operation` | [Operation](../modules/_interfaces_operation_.md#operation) |
 
-___
+---
 
-###  children
+### children
 
-• **children**: *[Node](../modules/_interfaces_node_.md#node)[]*
+• **children**: _[Node](../modules/\_interfaces_node_.md#node)[]\_
 
-*Defined in [interfaces/editor.ts:37](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L37)*
+---
 
-___
+### deleteBackward
 
-###  deleteBackward
-
-• **deleteBackward**: *function*
-
-*Defined in [interfaces/editor.ts:52](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L52)*
+• **deleteBackward**: _function_
 
 #### Type declaration:
 
-▸ (`unit`: "character" | "word" | "line" | "block"): *void*
+▸ (`unit`: "character" | "word" | "line" | "block"): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`unit` | "character" &#124; "word" &#124; "line" &#124; "block" |
+| Name   | Type                                                   |
+| ------ | ------------------------------------------------------ |
+| `unit` | "character" &#124; "word" &#124; "line" &#124; "block" |
 
-___
+---
 
-###  deleteForward
+### deleteForward
 
-• **deleteForward**: *function*
-
-*Defined in [interfaces/editor.ts:53](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L53)*
+• **deleteForward**: _function_
 
 #### Type declaration:
 
-▸ (`unit`: "character" | "word" | "line" | "block"): *void*
+▸ (`unit`: "character" | "word" | "line" | "block"): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`unit` | "character" &#124; "word" &#124; "line" &#124; "block" |
+| Name   | Type                                                   |
+| ------ | ------------------------------------------------------ |
+| `unit` | "character" &#124; "word" &#124; "line" &#124; "block" |
 
-___
+---
 
-###  deleteFragment
+### deleteFragment
 
-• **deleteFragment**: *function*
-
-*Defined in [interfaces/editor.ts:54](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L54)*
+• **deleteFragment**: _function_
 
 #### Type declaration:
 
-▸ (): *void*
+▸ (): _void_
 
-___
+---
 
-###  insertBreak
+### insertBreak
 
-• **insertBreak**: *function*
-
-*Defined in [interfaces/editor.ts:55](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L55)*
+• **insertBreak**: _function_
 
 #### Type declaration:
 
-▸ (): *void*
+▸ (): _void_
 
-___
+---
 
-###  insertFragment
+### insertFragment
 
-• **insertFragment**: *function*
-
-*Defined in [interfaces/editor.ts:56](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L56)*
+• **insertFragment**: _function_
 
 #### Type declaration:
 
-▸ (`fragment`: [Node](../modules/_interfaces_node_.md#node)[]): *void*
+▸ (`fragment`: [Node](../modules/_interfaces_node_.md#node)[]): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`fragment` | [Node](../modules/_interfaces_node_.md#node)[] |
+| Name       | Type                                           |
+| ---------- | ---------------------------------------------- |
+| `fragment` | [Node](../modules/_interfaces_node_.md#node)[] |
 
-___
+---
 
-###  insertNode
+### insertNode
 
-• **insertNode**: *function*
-
-*Defined in [interfaces/editor.ts:57](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L57)*
+• **insertNode**: _function_
 
 #### Type declaration:
 
-▸ (`node`: [Node](../modules/_interfaces_node_.md#node)): *void*
+▸ (`node`: [Node](../modules/_interfaces_node_.md#node)): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`node` | [Node](../modules/_interfaces_node_.md#node) |
+| Name   | Type                                         |
+| ------ | -------------------------------------------- |
+| `node` | [Node](../modules/_interfaces_node_.md#node) |
 
-___
+---
 
-###  insertText
+### insertText
 
-• **insertText**: *function*
-
-*Defined in [interfaces/editor.ts:58](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L58)*
+• **insertText**: _function_
 
 #### Type declaration:
 
-▸ (`text`: string): *void*
+▸ (`text`: string): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`text` | string |
+| Name   | Type   |
+| ------ | ------ |
+| `text` | string |
 
-___
+---
 
-###  isInline
+### isInline
 
-• **isInline**: *function*
-
-*Defined in [interfaces/editor.ts:44](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L44)*
+• **isInline**: _function_
 
 #### Type declaration:
 
-▸ (`element`: [Element](_interfaces_element_.element.md)): *boolean*
+▸ (`element`: [Element](_interfaces_element_.element.md)): _boolean_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`element` | [Element](_interfaces_element_.element.md) |
+| Name      | Type                                       |
+| --------- | ------------------------------------------ |
+| `element` | [Element](_interfaces_element_.element.md) |
 
-___
+---
 
-###  isVoid
+### isVoid
 
-• **isVoid**: *function*
-
-*Defined in [interfaces/editor.ts:45](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L45)*
+• **isVoid**: _function_
 
 #### Type declaration:
 
-▸ (`element`: [Element](_interfaces_element_.element.md)): *boolean*
+▸ (`element`: [Element](_interfaces_element_.element.md)): _boolean_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`element` | [Element](_interfaces_element_.element.md) |
+| Name      | Type                                       |
+| --------- | ------------------------------------------ |
+| `element` | [Element](_interfaces_element_.element.md) |
 
-___
+---
 
-###  marks
+### marks
 
-• **marks**: *Record‹string, any› | null*
+• **marks**: _Record‹string, any› | null_
 
-*Defined in [interfaces/editor.ts:40](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L40)*
+---
 
-___
+### normalizeNode
 
-###  normalizeNode
-
-• **normalizeNode**: *function*
-
-*Defined in [interfaces/editor.ts:46](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L46)*
+• **normalizeNode**: _function_
 
 #### Type declaration:
 
-▸ (`entry`: [NodeEntry](../modules/_interfaces_node_.md#nodeentry)): *void*
+▸ (`entry`: [NodeEntry](../modules/_interfaces_node_.md#nodeentry)): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`entry` | [NodeEntry](../modules/_interfaces_node_.md#nodeentry) |
+| Name    | Type                                                   |
+| ------- | ------------------------------------------------------ |
+| `entry` | [NodeEntry](../modules/_interfaces_node_.md#nodeentry) |
 
-___
+---
 
-###  onChange
+### onChange
 
-• **onChange**: *function*
-
-*Defined in [interfaces/editor.ts:47](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L47)*
+• **onChange**: _function_
 
 #### Type declaration:
 
-▸ (): *void*
+▸ (): _void_
 
-___
+---
 
-###  operations
+### operations
 
-• **operations**: *[Operation](../modules/_interfaces_operation_.md#operation)[]*
+• **operations**: _[Operation](../modules/\_interfaces_operation_.md#operation)[]\_
 
-*Defined in [interfaces/editor.ts:39](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L39)*
+---
 
-___
+### removeMark
 
-###  removeMark
-
-• **removeMark**: *function*
-
-*Defined in [interfaces/editor.ts:59](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L59)*
+• **removeMark**: _function_
 
 #### Type declaration:
 
-▸ (`key`: string): *void*
+▸ (`key`: string): _void_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`key` | string |
+| Name  | Type   |
+| ----- | ------ |
+| `key` | string |
 
-___
+---
 
-###  selection
+### selection
 
-• **selection**: *[Range](_interfaces_range_.range.md) | null*
-
-*Defined in [interfaces/editor.ts:38](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L38)*
+• **selection**: _[Range](\_interfaces_range_.range.md) | null\_

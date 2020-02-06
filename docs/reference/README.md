@@ -1,4 +1,3 @@
-[slate](README.md) › [Globals](globals.md)
 
 # slate
 

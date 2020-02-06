@@ -1,4 +1,3 @@
-[slate](../README.md) › [Globals](../globals.md) › ["interfaces/path"](_interfaces_path_.md)
 
 # External module: "interfaces/path"
 
@@ -18,8 +17,6 @@
 
 Ƭ **Path**: *number[]*
 
-*Defined in [interfaces/path.ts:10](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L10)*
-
 `Path` arrays are a list of indexes that describe a node's exact position in
 a Slate node tree. Although they are usually relative to the root `Editor`
 object, they can be relative to any `Node` object.
@@ -30,13 +27,9 @@ object, they can be relative to any `Node` object.
 
 ### ▪ **Path**: *object*
 
-*Defined in [interfaces/path.ts:12](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L12)*
-
 ###  ancestors
 
 ▸ **ancestors**(`path`: [Path](_interfaces_path_.md#path), `options`: object): *[Path](_interfaces_path_.md#path)[]*
-
-*Defined in [interfaces/path.ts:20](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L20)*
 
 Get a list of ancestor paths for a given path.
 
@@ -59,8 +52,6 @@ Name | Type |
 
 ▸ **common**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *[Path](_interfaces_path_.md#path)*
 
-*Defined in [interfaces/path.ts:37](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L37)*
-
 Get the common ancestor path of two paths.
 
 **Parameters:**
@@ -75,8 +66,6 @@ Name | Type |
 ###  compare
 
 ▸ **compare**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *-1 | 0 | 1*
-
-*Defined in [interfaces/path.ts:63](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L63)*
 
 Compare a path to another, returning an integer indicating whether the path
 was before, at, or after the other.
@@ -98,8 +87,6 @@ Name | Type |
 
 ▸ **endsAfter**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
 
-*Defined in [interfaces/path.ts:78](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L78)*
-
 Check if a path ends after one of the indexes in another.
 
 **Parameters:**
@@ -114,8 +101,6 @@ Name | Type |
 ###  endsAt
 
 ▸ **endsAt**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
-
-*Defined in [interfaces/path.ts:91](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L91)*
 
 Check if a path ends at one of the indexes in another.
 
@@ -132,8 +117,6 @@ Name | Type |
 
 ▸ **endsBefore**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
 
-*Defined in [interfaces/path.ts:102](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L102)*
-
 Check if a path ends before one of the indexes in another.
 
 **Parameters:**
@@ -148,8 +131,6 @@ Name | Type |
 ###  equals
 
 ▸ **equals**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
-
-*Defined in [interfaces/path.ts:115](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L115)*
 
 Check if a path is exactly equal to another.
 
@@ -166,8 +147,6 @@ Name | Type |
 
 ▸ **isAfter**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
 
-*Defined in [interfaces/path.ts:125](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L125)*
-
 Check if a path is after another.
 
 **Parameters:**
@@ -182,8 +161,6 @@ Name | Type |
 ###  isAncestor
 
 ▸ **isAncestor**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
-
-*Defined in [interfaces/path.ts:133](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L133)*
 
 Check if a path is an ancestor of another.
 
@@ -200,8 +177,6 @@ Name | Type |
 
 ▸ **isBefore**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
 
-*Defined in [interfaces/path.ts:141](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L141)*
-
 Check if a path is before another.
 
 **Parameters:**
@@ -216,8 +191,6 @@ Name | Type |
 ###  isChild
 
 ▸ **isChild**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
-
-*Defined in [interfaces/path.ts:149](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L149)*
 
 Check if a path is a child of another.
 
@@ -234,8 +207,6 @@ Name | Type |
 
 ▸ **isCommon**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
 
-*Defined in [interfaces/path.ts:159](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L159)*
-
 Check if a path is equal to or an ancestor of another.
 
 **Parameters:**
@@ -250,8 +221,6 @@ Name | Type |
 ###  isDescendant
 
 ▸ **isDescendant**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
-
-*Defined in [interfaces/path.ts:167](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L167)*
 
 Check if a path is a descendant of another.
 
@@ -268,8 +237,6 @@ Name | Type |
 
 ▸ **isParent**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
 
-*Defined in [interfaces/path.ts:175](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L175)*
-
 Check if a path is the parent of another.
 
 **Parameters:**
@@ -285,8 +252,6 @@ Name | Type |
 
 ▸ **isPath**(`value`: any): *value is Path*
 
-*Defined in [interfaces/path.ts:185](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L185)*
-
 Check is a value implements the `Path` interface.
 
 **Parameters:**
@@ -300,8 +265,6 @@ Name | Type |
 ###  isSibling
 
 ▸ **isSibling**(`path`: [Path](_interfaces_path_.md#path), `another`: [Path](_interfaces_path_.md#path)): *boolean*
-
-*Defined in [interfaces/path.ts:196](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L196)*
 
 Check if a path is a sibling of another.
 
@@ -317,8 +280,6 @@ Name | Type |
 ###  levels
 
 ▸ **levels**(`path`: [Path](_interfaces_path_.md#path), `options`: object): *[Path](_interfaces_path_.md#path)[]*
-
-*Defined in [interfaces/path.ts:216](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L216)*
 
 Get a list of paths at every level down to a path. Note: this is the same
 as `Path.ancestors`, but including the path itself.
@@ -342,8 +303,6 @@ Name | Type |
 
 ▸ **next**(`path`: [Path](_interfaces_path_.md#path)): *[Path](_interfaces_path_.md#path)*
 
-*Defined in [interfaces/path.ts:240](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L240)*
-
 Given a path, get the path to the next sibling node.
 
 **Parameters:**
@@ -357,8 +316,6 @@ Name | Type |
 ###  parent
 
 ▸ **parent**(`path`: [Path](_interfaces_path_.md#path)): *[Path](_interfaces_path_.md#path)*
-
-*Defined in [interfaces/path.ts:255](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L255)*
 
 Given a path, return a new path referring to the parent node above it.
 
@@ -374,8 +331,6 @@ Name | Type |
 
 ▸ **previous**(`path`: [Path](_interfaces_path_.md#path)): *[Path](_interfaces_path_.md#path)*
 
-*Defined in [interfaces/path.ts:267](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L267)*
-
 Given a path, get the path to the previous sibling node.
 
 **Parameters:**
@@ -389,8 +344,6 @@ Name | Type |
 ###  relative
 
 ▸ **relative**(`path`: [Path](_interfaces_path_.md#path), `ancestor`: [Path](_interfaces_path_.md#path)): *[Path](_interfaces_path_.md#path)*
-
-*Defined in [interfaces/path.ts:289](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L289)*
 
 Get a path relative to an ancestor.
 
@@ -406,8 +359,6 @@ Name | Type |
 ###  transform
 
 ▸ **transform**(`path`: [Path](_interfaces_path_.md#path), `operation`: [Operation](_interfaces_operation_.md#operation), `options`: object): *[Path](_interfaces_path_.md#path) | null*
-
-*Defined in [interfaces/path.ts:303](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/path.ts#L303)*
 
 Transform a path by an operation.
 

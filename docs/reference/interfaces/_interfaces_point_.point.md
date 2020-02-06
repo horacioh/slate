@@ -1,4 +1,3 @@
-[slate](../README.md) › [Globals](../globals.md) › ["interfaces/point"](../modules/_interfaces_point_.md) › [Point](_interfaces_point_.point.md)
 
 # Interface: Point
 
@@ -33,12 +32,8 @@ only refer to `Text` nodes.
 
 • **offset**: *number*
 
-*Defined in [interfaces/point.ts:14](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/point.ts#L14)*
-
 ___
 
 ###  path
 
 • **path**: *[Path](../modules/_interfaces_path_.md#path)*
-
-*Defined in [interfaces/point.ts:13](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/point.ts#L13)*

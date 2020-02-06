@@ -1,4 +1,3 @@
-[slate](../README.md) › [Globals](../globals.md) › ["interfaces/editor"](_interfaces_editor_.md)
 
 # External module: "interfaces/editor"
 
@@ -22,8 +21,6 @@
 
 Ƭ **NodeMatch**: *function | function*
 
-*Defined in [interfaces/editor.ts:1596](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1596)*
-
 A helper type for narrowing matched nodes with a predicate.
 
 ## Object literals
@@ -32,13 +29,9 @@ A helper type for narrowing matched nodes with a predicate.
 
 ### ▪ **Editor**: *object*
 
-*Defined in [interfaces/editor.ts:62](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L62)*
-
 ###  above
 
 ▸ **above**<**T**>(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)‹T› | undefined*
-
-*Defined in [interfaces/editor.ts:67](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L67)*
 
 Get the ancestor above a location in the document.
 
@@ -65,8 +58,6 @@ Name | Type |
 
 ▸ **addMark**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `key`: string, `value`: any): *void*
 
-*Defined in [interfaces/editor.ts:109](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L109)*
-
 Add a custom property to the leaf text nodes in the current selection.
 
 If the selection is currently collapsed, the marks will be added to the
@@ -85,8 +76,6 @@ Name | Type |
 ###  after
 
 ▸ **after**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[Point](../interfaces/_interfaces_point_.point.md) | undefined*
-
-*Defined in [interfaces/editor.ts:117](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L117)*
 
 Get the point after a location.
 
@@ -109,8 +98,6 @@ Name | Type |
 
 ▸ **before**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[Point](../interfaces/_interfaces_point_.point.md) | undefined*
 
-*Defined in [interfaces/editor.ts:151](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L151)*
-
 Get the point before a location.
 
 **Parameters:**
@@ -132,8 +119,6 @@ Name | Type |
 
 ▸ **deleteBackward**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *void*
 
-*Defined in [interfaces/editor.ts:189](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L189)*
-
 Delete content in the editor backward from the current selection.
 
 **Parameters:**
@@ -151,8 +136,6 @@ Name | Type |
 ###  deleteForward
 
 ▸ **deleteForward**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *void*
-
-*Defined in [interfaces/editor.ts:203](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L203)*
 
 Delete content in the editor forward from the current selection.
 
@@ -172,8 +155,6 @@ Name | Type |
 
 ▸ **deleteFragment**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *void*
 
-*Defined in [interfaces/editor.ts:217](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L217)*
-
 Delete the content in the current selection.
 
 **Parameters:**
@@ -187,8 +168,6 @@ Name | Type |
 ###  edges
 
 ▸ **edges**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *[[Point](../interfaces/_interfaces_point_.point.md), [Point](../interfaces/_interfaces_point_.point.md)]*
-
-*Defined in [interfaces/editor.ts:225](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L225)*
 
 Get the start and end points of a location.
 
@@ -205,8 +184,6 @@ Name | Type |
 
 ▸ **end**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *[Point](../interfaces/_interfaces_point_.point.md)*
 
-*Defined in [interfaces/editor.ts:233](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L233)*
-
 Get the end point of a location.
 
 **Parameters:**
@@ -221,8 +198,6 @@ Name | Type |
 ###  first
 
 ▸ **first**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *[NodeEntry](_interfaces_node_.md#nodeentry)*
-
-*Defined in [interfaces/editor.ts:241](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L241)*
 
 Get the first node at a location.
 
@@ -239,8 +214,6 @@ Name | Type |
 
 ▸ **fragment**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *[Descendant](_interfaces_node_.md#descendant)[]*
 
-*Defined in [interfaces/editor.ts:250](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L250)*
-
 Get the fragment at a location.
 
 **Parameters:**
@@ -255,8 +228,6 @@ Name | Type |
 ###  hasBlocks
 
 ▸ **hasBlocks**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `element`: [Element](../interfaces/_interfaces_element_.element.md)): *boolean*
-
-*Defined in [interfaces/editor.ts:259](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L259)*
 
 Check if a node has block children.
 
@@ -273,8 +244,6 @@ Name | Type |
 
 ▸ **hasInlines**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `element`: [Element](../interfaces/_interfaces_element_.element.md)): *boolean*
 
-*Defined in [interfaces/editor.ts:267](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L267)*
-
 Check if a node has inline and text children.
 
 **Parameters:**
@@ -289,8 +258,6 @@ Name | Type |
 ###  hasTexts
 
 ▸ **hasTexts**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `element`: [Element](../interfaces/_interfaces_element_.element.md)): *boolean*
-
-*Defined in [interfaces/editor.ts:277](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L277)*
 
 Check if a node has text children.
 
@@ -307,8 +274,6 @@ Name | Type |
 
 ▸ **insertBreak**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *void*
 
-*Defined in [interfaces/editor.ts:287](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L287)*
-
 Insert a block break at the current selection.
 
 If the selection is currently expanded, it will be deleted first.
@@ -324,8 +289,6 @@ Name | Type |
 ###  insertFragment
 
 ▸ **insertFragment**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `fragment`: [Node](_interfaces_node_.md#node)[]): *void*
-
-*Defined in [interfaces/editor.ts:297](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L297)*
 
 Insert a fragment at the current selection.
 
@@ -344,8 +307,6 @@ Name | Type |
 
 ▸ **insertNode**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `node`: [Node](_interfaces_node_.md#node)): *void*
 
-*Defined in [interfaces/editor.ts:307](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L307)*
-
 Insert a node at the current selection.
 
 If the selection is currently expanded, it will be deleted first.
@@ -362,8 +323,6 @@ Name | Type |
 ###  insertText
 
 ▸ **insertText**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `text`: string): *void*
-
-*Defined in [interfaces/editor.ts:317](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L317)*
 
 Insert text at the current selection.
 
@@ -382,8 +341,6 @@ Name | Type |
 
 ▸ **isBlock**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `value`: any): *value is Element*
 
-*Defined in [interfaces/editor.ts:325](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L325)*
-
 Check if a value is a block `Element` object.
 
 **Parameters:**
@@ -398,8 +355,6 @@ Name | Type |
 ###  isEdge
 
 ▸ **isEdge**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `point`: [Point](../interfaces/_interfaces_point_.point.md), `at`: [Location](_interfaces_location_.md#location)): *boolean*
-
-*Defined in [interfaces/editor.ts:370](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L370)*
 
 Check if a point is an edge of a location.
 
@@ -417,8 +372,6 @@ Name | Type |
 
 ▸ **isEditor**(`value`: any): *value is Editor*
 
-*Defined in [interfaces/editor.ts:333](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L333)*
-
 Check if a value is an `Editor` object.
 
 **Parameters:**
@@ -432,8 +385,6 @@ Name | Type |
 ###  isEmpty
 
 ▸ **isEmpty**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `element`: [Element](../interfaces/_interfaces_element_.element.md)): *boolean*
-
-*Defined in [interfaces/editor.ts:378](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L378)*
 
 Check if an element is empty, accounting for void nodes.
 
@@ -449,8 +400,6 @@ Name | Type |
 ###  isEnd
 
 ▸ **isEnd**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `point`: [Point](../interfaces/_interfaces_point_.point.md), `at`: [Location](_interfaces_location_.md#location)): *boolean*
-
-*Defined in [interfaces/editor.ts:361](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L361)*
 
 Check if a point is the end point of a location.
 
@@ -468,8 +417,6 @@ Name | Type |
 
 ▸ **isInline**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `value`: any): *value is Element*
 
-*Defined in [interfaces/editor.ts:394](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L394)*
-
 Check if a value is an inline `Element` object.
 
 **Parameters:**
@@ -485,8 +432,6 @@ Name | Type |
 
 ▸ **isNormalizing**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *boolean*
 
-*Defined in [interfaces/editor.ts:402](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L402)*
-
 Check if the editor is currently normalizing after each operation.
 
 **Parameters:**
@@ -500,8 +445,6 @@ Name | Type |
 ###  isStart
 
 ▸ **isStart**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `point`: [Point](../interfaces/_interfaces_point_.point.md), `at`: [Location](_interfaces_location_.md#location)): *boolean*
-
-*Defined in [interfaces/editor.ts:411](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L411)*
 
 Check if a point is the start point of a location.
 
@@ -519,8 +462,6 @@ Name | Type |
 
 ▸ **isVoid**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `value`: any): *value is Element*
 
-*Defined in [interfaces/editor.ts:425](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L425)*
-
 Check if a value is a void `Element` object.
 
 **Parameters:**
@@ -536,8 +477,6 @@ Name | Type |
 
 ▸ **last**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *[NodeEntry](_interfaces_node_.md#nodeentry)*
 
-*Defined in [interfaces/editor.ts:433](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L433)*
-
 Get the last node at a location.
 
 **Parameters:**
@@ -552,8 +491,6 @@ Name | Type |
 ###  leaf
 
 ▸ **leaf**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)‹[Text](../interfaces/_interfaces_text_.text.md)›*
-
-*Defined in [interfaces/editor.ts:442](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L442)*
 
 Get the leaf text node at a location.
 
@@ -575,8 +512,6 @@ Name | Type |
 ###  levels
 
 ▸ **levels**<**T**>(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *Iterable‹[NodeEntry](_interfaces_node_.md#nodeentry)‹T››*
-
-*Defined in [interfaces/editor.ts:459](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L459)*
 
 Iterate through all of the levels at a location.
 
@@ -603,8 +538,6 @@ Name | Type |
 
 ▸ **marks**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *Record‹string, any› | null*
 
-*Defined in [interfaces/editor.ts:505](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L505)*
-
 Get the marks that would be added to text at the current selection.
 
 **Parameters:**
@@ -618,8 +551,6 @@ Name | Type |
 ###  next
 
 ▸ **next**<**T**>(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)‹T› | undefined*
-
-*Defined in [interfaces/editor.ts:556](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L556)*
 
 Get the matching node in the branch of the document after a location.
 
@@ -646,8 +577,6 @@ Name | Type |
 
 ▸ **node**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)*
 
-*Defined in [interfaces/editor.ts:597](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L597)*
-
 Get the node at a location.
 
 **Parameters:**
@@ -668,8 +597,6 @@ Name | Type |
 ###  nodes
 
 ▸ **nodes**<**T**>(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *Iterable‹[NodeEntry](_interfaces_node_.md#nodeentry)‹T››*
-
-*Defined in [interfaces/editor.ts:614](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L614)*
 
 Iterate through all of the nodes in the Editor.
 
@@ -698,8 +625,6 @@ Name | Type |
 
 ▸ **normalize**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *void*
 
-*Defined in [interfaces/editor.ts:724](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L724)*
-
 Normalize any dirty objects in the editor.
 
 **Parameters:**
@@ -717,8 +642,6 @@ Name | Type |
 ###  parent
 
 ▸ **parent**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)‹[Ancestor](_interfaces_node_.md#ancestor)›*
-
-*Defined in [interfaces/editor.ts:771](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L771)*
 
 Get the parent node of a location.
 
@@ -741,8 +664,6 @@ Name | Type |
 
 ▸ **path**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[Path](_interfaces_path_.md#path)*
 
-*Defined in [interfaces/editor.ts:789](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L789)*
-
 Get the path of a location.
 
 **Parameters:**
@@ -763,8 +684,6 @@ Name | Type |
 ###  pathRef
 
 ▸ **pathRef**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `path`: [Path](_interfaces_path_.md#path), `options`: object): *[PathRef](../interfaces/_interfaces_path_ref_.pathref.md)*
-
-*Defined in [interfaces/editor.ts:835](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L835)*
 
 Create a mutable ref for a `Path` object, which will stay in sync as new
 operations are applied to the editor.
@@ -787,8 +706,6 @@ Name | Type |
 
 ▸ **pathRefs**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *Set‹[PathRef](../interfaces/_interfaces_path_ref_.pathref.md)›*
 
-*Defined in [interfaces/editor.ts:864](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L864)*
-
 Get the set of currently tracked path refs of the editor.
 
 **Parameters:**
@@ -802,8 +719,6 @@ Name | Type |
 ###  point
 
 ▸ **point**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `options`: object): *[Point](../interfaces/_interfaces_point_.point.md)*
-
-*Defined in [interfaces/editor.ts:879](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L879)*
 
 Get the start or end point of a location.
 
@@ -824,8 +739,6 @@ Name | Type |
 ###  pointRef
 
 ▸ **pointRef**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `point`: [Point](../interfaces/_interfaces_point_.point.md), `options`: object): *[PointRef](../interfaces/_interfaces_point_ref_.pointref.md)*
-
-*Defined in [interfaces/editor.ts:923](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L923)*
 
 Create a mutable ref for a `Point` object, which will stay in sync as new
 operations are applied to the editor.
@@ -848,8 +761,6 @@ Name | Type |
 
 ▸ **pointRefs**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *Set‹[PointRef](../interfaces/_interfaces_point_ref_.pointref.md)›*
 
-*Defined in [interfaces/editor.ts:952](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L952)*
-
 Get the set of currently tracked point refs of the editor.
 
 **Parameters:**
@@ -863,8 +774,6 @@ Name | Type |
 ###  positions
 
 ▸ **positions**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *Iterable‹[Point](../interfaces/_interfaces_point_.point.md)›*
-
-*Defined in [interfaces/editor.ts:975](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L975)*
 
 Iterate through all of the positions in the document where a `Point` can be
 placed.
@@ -894,8 +803,6 @@ Name | Type |
 
 ▸ **previous**<**T**>(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)‹T› | undefined*
 
-*Defined in [interfaces/editor.ts:1089](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1089)*
-
 Get the matching node in the branch of the document before a location.
 
 **Type parameters:**
@@ -921,8 +828,6 @@ Name | Type |
 
 ▸ **range**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location), `to?`: [Location](_interfaces_location_.md#location)): *[Range](../interfaces/_interfaces_range_.range.md)*
 
-*Defined in [interfaces/editor.ts:1137](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1137)*
-
 Get a range of a location.
 
 **Parameters:**
@@ -938,8 +843,6 @@ Name | Type |
 ###  rangeRef
 
 ▸ **rangeRef**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `range`: [Range](../interfaces/_interfaces_range_.range.md), `options`: object): *[RangeRef](../interfaces/_interfaces_range_ref_.rangeref.md)*
-
-*Defined in [interfaces/editor.ts:1152](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1152)*
 
 Create a mutable ref for a `Range` object, which will stay in sync as new
 operations are applied to the editor.
@@ -962,8 +865,6 @@ Name | Type |
 
 ▸ **rangeRefs**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md)): *Set‹[RangeRef](../interfaces/_interfaces_range_ref_.rangeref.md)›*
 
-*Defined in [interfaces/editor.ts:1181](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1181)*
-
 Get the set of currently tracked range refs of the editor.
 
 **Parameters:**
@@ -977,8 +878,6 @@ Name | Type |
 ###  removeMark
 
 ▸ **removeMark**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `key`: string): *void*
-
-*Defined in [interfaces/editor.ts:1200](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1200)*
 
 Remove a custom property from all of the leaf text nodes in the current
 selection.
@@ -999,8 +898,6 @@ Name | Type |
 
 ▸ **start**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *[Point](../interfaces/_interfaces_point_.point.md)*
 
-*Defined in [interfaces/editor.ts:1208](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1208)*
-
 Get the start point of a location.
 
 **Parameters:**
@@ -1015,8 +912,6 @@ Name | Type |
 ###  string
 
 ▸ **string**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `at`: [Location](_interfaces_location_.md#location)): *string*
-
-*Defined in [interfaces/editor.ts:1219](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1219)*
 
 Get the text string content of a location.
 
@@ -1036,8 +931,6 @@ Name | Type |
 
 ▸ **transform**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `op`: [Operation](_interfaces_operation_.md#operation)): *void*
 
-*Defined in [interfaces/editor.ts:1248](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1248)*
-
 Transform the editor by an operation.
 
 **Parameters:**
@@ -1052,8 +945,6 @@ Name | Type |
 ###  unhangRange
 
 ▸ **unhangRange**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `range`: [Range](../interfaces/_interfaces_range_.range.md), `options`: object): *[Range](../interfaces/_interfaces_range_.range.md)*
-
-*Defined in [interfaces/editor.ts:1517](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1517)*
 
 Convert a range into a non-hanging one.
 
@@ -1075,8 +966,6 @@ Name | Type |
 
 ▸ **void**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `options`: object): *[NodeEntry](_interfaces_node_.md#nodeentry)‹[Element](../interfaces/_interfaces_element_.element.md)› | undefined*
 
-*Defined in [interfaces/editor.ts:1565](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1565)*
-
 Match a void node in the current branch of the editor.
 
 **Parameters:**
@@ -1096,8 +985,6 @@ Name | Type |
 ###  withoutNormalizing
 
 ▸ **withoutNormalizing**(`editor`: [Editor](../interfaces/_interfaces_editor_.editor.md), `fn`: function): *void*
-
-*Defined in [interfaces/editor.ts:1583](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/editor.ts#L1583)*
 
 Call a function, deferring normalization until after it completes.
 

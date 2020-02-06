@@ -1,4 +1,3 @@
-[slate](../README.md) › [Globals](../globals.md) › ["interfaces/element"](_interfaces_element_.md)
 
 # External module: "interfaces/element"
 
@@ -22,8 +21,6 @@
 
 Ƭ **ElementEntry**: *[[Element](../interfaces/_interfaces_element_.element.md), [Path](_interfaces_path_.md#path)]*
 
-*Defined in [interfaces/element.ts:66](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/element.ts#L66)*
-
 `ElementEntry` objects refer to an `Element` and the `Path` where it can be
 found inside a root node.
 
@@ -33,13 +30,9 @@ found inside a root node.
 
 ### ▪ **Element**: *object*
 
-*Defined in [interfaces/element.ts:15](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/element.ts#L15)*
-
 ###  isElement
 
 ▸ **isElement**(`value`: any): *value is Element*
-
-*Defined in [interfaces/element.ts:20](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/element.ts#L20)*
 
 Check if a value implements the `Element` interface.
 
@@ -55,8 +48,6 @@ Name | Type |
 
 ▸ **isElementList**(`value`: any): *value is Element[]*
 
-*Defined in [interfaces/element.ts:32](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/element.ts#L32)*
-
 Check if a value is an array of `Element` objects.
 
 **Parameters:**
@@ -70,8 +61,6 @@ Name | Type |
 ###  matches
 
 ▸ **matches**(`element`: [Element](../interfaces/_interfaces_element_.element.md), `props`: Partial‹[Element](../interfaces/_interfaces_element_.element.md)›): *boolean*
-
-*Defined in [interfaces/element.ts:46](https://github.com/horacioh/slate/blob/b3461bd5/packages/slate/src/interfaces/element.ts#L46)*
 
 Check if an element matches set of properties.
 
