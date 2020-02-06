@@ -30,3 +30,8 @@
 - [Contributing](../Contributing.md)
 - [Changelog](../Changelog.md)
 - [FAQ](./general/faq.md)
+
+## Reference
+
+- [Intro](./reference/README.md)
+- [Globals](./reference/globals.md)
