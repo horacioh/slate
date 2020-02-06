@@ -8,9 +8,12 @@ Slate editors can edit complex, nested data structures. And for the most part th
 
 Slate editors come with a few built-in constraints out of the box. These constraints are there to make working with content _much_ more predictable than standard `contenteditable`. All of the built-in logic in Slate depends on these constraints, so unfortunately you cannot omit them. They are...
 
-1. **All `Element` nodes must contain at least one `Text` descendant.** If an element node does not contain any children, an empty text node will be added as its only child. This constraint exists to ensure that the selection's anchor and focus points \(which rely on referencing text nodes\) can always be placed inside any node. With this, empty elements \(or void elements\) wouldn't be selectable.
+1. **All `Element` nodes must contain at least one `Text` descendant.** If an element node does not contain any children, an empty text node will be added as its only child. This constraint exists to ensure that the selection's anchor and focus points (which rely on referencing text nodes) can always be placed inside any node. With this, empty elements (or void elements) wouldn't be selectable.
+
 2. **Two adjacent texts with the same custom properties will be merged.** If two adjacent text nodes have the same formatting, they're merged into a single text node with a combined text string of the two. This exists to prevent the text nodes from only ever expanding in count in the document, since both adding and removing formatting results in splitting text nodes.
+
 3. **Block nodes can only contain other blocks, or inline and text nodes.** For example, a `paragraph` block cannot have another `paragraph` block element _and_ a `link` inline element as children at the same time. The type of children allowed is determined by the first child, and any other non-conforming children are removed. This ensures that common richtext behaviors like "splitting a block in two" function consistently.
+
 4. **The top-level editor node can only contain block nodes.** If any of the top-level children are inline or text nodes they will be removed. This ensures that there are always block nodes in the editor so that behaviors like "splitting a block in two" work as expected.
 
 These default constraints are all mandated because they make working with Slate documents _much_ more preditable.
@@ -21,11 +24,11 @@ These default constraints are all mandated because they make working with Slate 
 
 The built-in constraints are fairly generic. But you can also add your own constraints on top of the built-in ones that are specific to your domain.
 
-To do this, you extend the `normalizeNode` function on the editor. The `normalizeNode` function gets called every time an operation is applied that inserts or updates a node \(or its descendants\), giving you the opportunity to ensure that the changes didn't leave it in an invalid state, and correcting the node if so.
+To do this, you extend the `normalizeNode` function on the editor. The `normalizeNode` function gets called every time an operation is applied that inserts or updates a node (or its descendants), giving you the opportunity to ensure that the changes didn't leave it in an invalid state, and correcting the node if so.
 
 For example here's a plugin that ensures `paragraph` blocks only have text or inline elements as children:
 
-```javascript
+```js
 import { Element, Node } from 'slate'
 
 const withParagraphs = editor => {
@@ -62,7 +65,7 @@ One thing to understand about `normalizeNode` constraints is that they are **mul
 
 If you check the example above again, you'll notice the `return` statement:
 
-```javascript
+```js
 if (Element.isElement(child) && !editor.isInline(child)) {
   Transforms.unwrapNodes(editor, { at: childPath })
   return
@@ -91,7 +94,7 @@ To see how this works in practice, let's start with this invalid document:
 
 The editor starts by running `normalizeNode` on `<paragraph c>`. And it is valid, because contains only text nodes as children.
 
-But then, it moves up the tree, and runs `normalizeNode` on `<paragraph b>`. This paragraph is invalid, since it contains a block element \(`<paragraph c>`\). So that child block gets unwrapped, resulting in a new document of:
+But then, it moves up the tree, and runs `normalizeNode` on `<paragraph b>`. This paragraph is invalid, since it contains a block element (`<paragraph c>`). So that child block gets unwrapped, resulting in a new document of:
 
 ```jsx
 <editor>
@@ -119,7 +122,7 @@ The one pitfall to avoid however it creating an infinite normalization loop. Thi
 
 For example, consider a normalization that ensured `link` elements have a valid `url` property:
 
-```javascript
+```js
 // WARNING: this is an example of incorrect behavior!
 const withLinks = editor => {
   const { normalizeNode } = editor
@@ -146,4 +149,3 @@ const withLinks = editor => {
 This fix is incorrectly written. It wants to ensure that all `link` elements have a `url` property string. But to fix invalid links it sets the `url` to `null`, which is still not a string!
 
 In this case you'd either want to unwrap the link, removing it entirely. _Or_ expand your validation to accept an "empty" `url == null` as well.
-

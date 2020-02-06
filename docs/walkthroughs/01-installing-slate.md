@@ -2,19 +2,20 @@
 
 Slate is a monorepo divided up into multi npm packages, so to install it you do:
 
-```text
+```
 yarn add slate slate-react
 ```
 
 You'll also need to be sure to install Slate's peer dependencies:
 
-```text
+```
 yarn add react react-dom
 ```
 
-_Note, if you'd rather use a pre-bundled version of Slate, you can `yarn add slate` and retrieve the bundled `dist/slate.js` file! Check out the_ [_Using the Bundled Source_](https://github.com/horacioh/slate/tree/fd0c3a1b7ba4f1798c0daf51386ea6ce5314976b/docs/walkthroughs/using-the-bundled-source.md) _guide for more information._
+_Note, if you'd rather use a pre-bundled version of Slate, you can `yarn add slate` and retrieve the bundled `dist/slate.js` file! Check out the [Using the Bundled Source](./using-the-bundled-source.md) guide for more information._
 
 Once you've installed Slate, you'll need to import it.
+
 
 ```jsx
 // Import React dependencies.
@@ -123,4 +124,3 @@ const App = () => {
 There you have it!
 
 That's the most basic example of Slate. If you render that onto the page, you should see a paragraph with the text `A line of text in a paragraph.`. And when you type, you should see the text change!
-

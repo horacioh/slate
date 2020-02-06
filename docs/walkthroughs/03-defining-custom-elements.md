@@ -1,12 +1,13 @@
-# Defining Custom Elements
+# Defining Custom Block Nodes
 
 In our previous example, we started with a paragraph, but we never actually told Slate anything about the `paragraph` block type. We just let it use its internal default renderer, which uses a plain old `<div>`.
 
 But that's not all you can do. Slate lets you define any type of custom blocks you want, like block quotes, code blocks, list items, etc.
 
-We'll show you how. Let's start with our app from earlier: You can check a working version [here](https://codesandbox.io/s/slatejs-examples-adding-custom-elements-eegoq).
+We'll show you how. Let's start with our app from earlier:
+You can check a working version [here](https://codesandbox.io/s/slatejs-examples-adding-custom-elements-eegoq).
 
-```javascript
+```js
 const App = () => {
   const editor = useMemo(() => withReact(createEditor()), [])
   const [value, setValue] = useState([
@@ -114,7 +115,7 @@ const DefaultElement = props => {
 }
 ```
 
-Okay, but now we'll need a way for the user to actually turn a block into a code block. So let's change our `onKeyDown` function to add a ``Ctrl-```  shortcut that does just that:
+Okay, but now we'll need a way for the user to actually turn a block into a code block. So let's change our `onKeyDown` function to add a `` Ctrl-` `` shortcut that does just that:
 
 ```jsx
 // Import the `Editor` helpers from Slate.
@@ -172,9 +173,9 @@ const DefaultElement = props => {
 }
 ```
 
-Now, if you press ``Ctrl-```  the block your cursor is in should turn into a code block! Magic!
+Now, if you press `` Ctrl-` `` the block your cursor is in should turn into a code block! Magic!
 
-But we forgot one thing. When you hit ``Ctrl-```  again, it should change the code block back into a paragraph. To do that, we'll need to add a bit of logic to change the type we set based on whether any of the currently selected blocks are already a code block:
+But we forgot one thing. When you hit `` Ctrl-` `` again, it should change the code block back into a paragraph. To do that, we'll need to add a bit of logic to change the type we set based on whether any of the currently selected blocks are already a code block:
 
 ```jsx
 const App = () => {
@@ -220,7 +221,6 @@ const App = () => {
 }
 ```
 
-And there you have it! If you press ``Ctrl-```  while inside a code block, it should turn back into a paragraph!
+And there you have it! If you press `` Ctrl-` `` while inside a code block, it should turn back into a paragraph!
 
 You can check a working version [here](https://codesandbox.io/s/slatejs-examples-adding-custom-elements-eegoq).
-

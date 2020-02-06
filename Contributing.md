@@ -2,14 +2,14 @@
 
 Want to contribute to Slate? That would be awesome!
 
-* [Reporting Bugs](contributing.md#reporting-bugs)
-* [Asking Questions](contributing.md#asking-questions)
-* [Submitting Pull Requests](contributing.md#submitting-pull-requests)
-* [Repository Setup](contributing.md#repository-setup)
-* [Running Examples](contributing.md#running-examples)
-* [Running Tests](contributing.md#running-tests)
-* [Testing Input Methods](contributing.md#testing-input-methods)
-* [Publishing Releases](contributing.md#publishing-releases)
+- [Reporting Bugs](#reporting-bugs)
+- [Asking Questions](#asking-questions)
+- [Submitting Pull Requests](#submitting-pull-requests)
+- [Repository Setup](#repository-setup)
+- [Running Examples](#running-examples)
+- [Running Tests](#running-tests)
+- [Testing Input Methods](#testing-input-methods)
+- [Publishing Releases](#publishing-releases)
 
 ## Reporting Bugs
 
@@ -17,19 +17,19 @@ If you run into any weird behavior while using Slate, feel free to open a new is
 
 Any issue you open must include:
 
-* A [JSFiddle](https://jsfiddle.net/01pLxfzu/) that reproduces the bug with a minimal setup.
-* A GIF showing the issue in action. \(Using something like [RecordIt](http://recordit.co/).\)
-* A clear explanation of what the issue is.
+- A [JSFiddle](https://jsfiddle.net/01pLxfzu/) that reproduces the bug with a minimal setup.
+- A GIF showing the issue in action. (Using something like [RecordIt](http://recordit.co/).)
+- A clear explanation of what the issue is.
 
 Here's a [JSFiddle template for Slate](https://jsfiddle.net/01pLxfzu/) to get you started:
 
-[![](../.gitbook/assets/jsfiddle.png)](https://jsfiddle.net/01pLxfzu/)
+[![](./docs/images/jsfiddle.png)](https://jsfiddle.net/01pLxfzu/)
 
 ## Asking Questions
 
 We've also got a [Slate Slack team](https://slate-slack.herokuapp.com) where you can ask questions and get answers from other people using Slate:
 
-[![](../.gitbook/assets/slack.png)](https://slate-slack.herokuapp.com)
+[![](./docs/images/slack.png)](https://slate-slack.herokuapp.com)
 
 Please use the Slack instead of asking questions in issues, since we want to reserve issues for keeping track of bugs and features. We close questions in issues so that maintaining the project isn't overwhelming.
 
@@ -45,34 +45,34 @@ The slate repository is a monorepo that is managed with [lerna](https://github.c
 
 To run the build, you need to have the Slate repository cloned to your computer. After that, you need to `cd` into the directory where you cloned it, and install the dependencies with `yarn` and build the monorepo:
 
-```text
+```
 yarn install
 yarn build
 ```
 
 ## Running Examples
 
-To run the examples, start by building the mono repo as described in the [Repository Setup](contributing.md#repository-setup) section.
+To run the examples, start by building the mono repo as described in the [Repository Setup](#repository-setup) section.
 
 Then you can start the examples server with:
 
-```text
+```
 yarn start
 ```
 
 ## Running Tests
 
-To run the tests, start by building the mono repo as described in the [Repository Setup](contributing.md#repository-setup) section.
+To run the tests, start by building the mono repo as described in the [Repository Setup](#repository-setup) section.
 
 Then you can rerun the tests with:
 
-```text
+```
 yarn test
 ```
 
 If you need to debug something, you can add a `debugger` line to the source, and then run `yarn test:inspect`.
 
-If you only want to run a specific test or tests, you can run `yarn test --fgrep="slate-react rendering"` flag which will filter the tests being run by grepping for the string in each test. \(This is a Mocha flag that gets passed through.\)
+If you only want to run a specific test or tests, you can run `yarn test --fgrep="slate-react rendering"` flag which will filter the tests being run by grepping for the string in each test. (This is a Mocha flag that gets passed through.)
 
 ## Testing Input Methods
 
@@ -82,9 +82,8 @@ If you only want to run a specific test or tests, you can run `yarn test --fgrep
 
 Since we use [Lerna](https://lernajs.io) to manage the Slate packages this is fairly easy, just run:
 
-```javascript
+```js
 yarn release
 ```
 
 And follow the prompts Lerna gives you.
-

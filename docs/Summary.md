@@ -10,7 +10,7 @@
 * [Applying Custom Formatting](walkthroughs/04-applying-custom-formatting.md)
 * [Executing Commands](walkthroughs/05-executing-commands.md)
 * [Saving to a Database](walkthroughs/06-saving-to-a-database.md)
-* [Using the Bundled Source](walkthroughs/xx-using-the-bundled-source.md)
+* [Using the Bundled Source](walkthroughs/XX-using-the-bundled-source.md)
 
 ## Concepts
 
@@ -24,12 +24,12 @@
 * [Rendering](concepts/08-rendering.md)
 * [Serializing](concepts/09-serializing.md)
 * [Normalizing](concepts/10-normalizing.md)
-* [Migrating](concepts/xx-migrating.md)
+* [Migrating](concepts/XX-migrating.md)
 
 ## General
 
 * [Resources](general/resources.md)
-* [Contributing](general/contributing.md)
-* [Changelog](general/changelog.md)
+* [Contributing](../Contributing.md)
+* [Changelog](../Changelog.md)
 * [FAQ](general/faq.md)
 

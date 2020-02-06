@@ -1,14 +1,14 @@
-# Nodes
+# Nodes: Editor, Elements and Texts
 
 The most important type are the `Node` objects:
 
-* A root-level `Editor` node that contains their entire document's content.
-* Container `Element` nodes which have semantic meaning in your domain.
-* And leaf-level `Text` nodes which contain the document's text.
+- A root-level `Editor` node that contains their entire document's content.
+- Container `Element` nodes which have semantic meaning in your domain.
+- And leaf-level `Text` nodes which contain the document's text.
 
 These three interfaces are combined together to form a tree—just like the DOM. For example, here's a simple plaintext value:
 
-```javascript
+```js
 const editor = {
   children: [
     {
@@ -28,10 +28,10 @@ Mirroring the DOM as much as possible is one of Slate's principles. People use t
 
 > 🤖 The following content on Mozilla's Developer Network may help you learn more about the corresponding DOM concepts:
 >
-> * [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
-> * [Block Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
-> * [Inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
-> * [Text elements](https://developer.mozilla.org/en-US/docs/Web/API/Text)
+> - [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+> - [Block Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+> - [Inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
+> - [Text elements](https://developer.mozilla.org/en-US/docs/Web/API/Text)
 
 A Slate document is a nested and recursive structure. In a document, elements can have children nodes—all which may have children nodes without limit. The nested and recursive structure enables you to model simple behaviors such as user mentions and hashtags or complex behaviors such as tables and figures with captions.
 
@@ -39,7 +39,7 @@ A Slate document is a nested and recursive structure. In a document, elements ca
 
 The top-level node in a Slate document is the `Editor` itself. It encapsulates all of the richtext "content" of the document. Its interface is:
 
-```typescript
+```ts
 interface Editor {
   children: Node[]
   ...
@@ -52,15 +52,16 @@ We'll cover its functionality later, but the important part as far as nodes are 
 
 Elements make up the middle layers of a richtext document. They are the nodes that are custom to your own domain. Their interface is:
 
-```typescript
+```ts
 interface Element {
   children: Node[]
+  [key: string]: any
 }
 ```
 
 You can define custom elements for any type of content you want. For example you might have paragraphs and quotes in your data model which are differentiated by a `type` property:
 
-```javascript
+```js
 const paragraph = {
   type: 'paragraph',
   children: [...],
@@ -74,7 +75,7 @@ const quote = {
 
 It's important to note that you can use _any_ custom properties you want. The `type` property in that example isn't something Slate knows or cares about. If you were defining your own "link" nodes, you might have a `url` property:
 
-```javascript
+```js
 const link = {
   type: 'link',
   url: 'https://example.com',
@@ -84,7 +85,7 @@ const link = {
 
 Or maybe you want to give all of your nodes ID an property:
 
-```javascript
+```js
 const paragraph = {
   id: 1,
   type: 'paragraph',
@@ -104,7 +105,7 @@ But in certain cases, like for links, you might want to make as "inline" flowing
 
 > 🤖 This is a concept borrowed from the DOM's behavior, see [Block Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements) and [Inline Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements).
 
-You can define which nodes are treated as inline nodes by overriding the `editor.isInline` function. \(By default it always returns `false`.\)
+You can define which nodes are treated as inline nodes by overriding the `editor.isInline` function. (By default it always returns `false`.)
 
 Elements can either contain block elements as children. Or they can contain inline elements intermingled with text nodes as children. But elements **cannot** contain some children that are blocks and some that are inlines.
 
@@ -116,21 +117,22 @@ Elements default to being non-void, meaning that their children are fully editab
 
 > 🤖 This is a concept borrowed from the HTML spec, see [Void Elements](https://www.w3.org/TR/2011/WD-html-markup-20110405/syntax.html#void-element).
 
-You can do define which elements are treated as void by overriding the `editor.isVoid` function. \(By default it always returns `false`.\)
+You can do define which elements are treated as void by overriding the `editor.isVoid` function. (By default it always returns `false`.)
 
 ## `Text`
 
 Text nodes are the lowest-level nodes in the tree, containing the text content of the document, along with any formatting. Their interface is:
 
-```typescript
+```ts
 interface Text {
   text: string
+  [key: string]: any
 }
 ```
 
 For example, a string of bold text:
 
-```javascript
+```js
 const text = {
   text: 'A string of bold text',
   bold: true,
@@ -138,4 +140,3 @@ const text = {
 ```
 
 Text nodes too can contain any custom properties you want, and that's how you implement custom formatting like **bold**, _italic_, `code`, etc.
-
